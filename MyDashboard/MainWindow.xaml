@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDashboard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Height="685" Width="1170"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="d1" Color="#242424" />
+        <SolidColorBrush x:Key="d2" Color="#393737" />
+    </Window.Resources>
+
+    <Border
+        Background="{StaticResource d1}"
+        CornerRadius="6"
+        >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="225" x:Name="LeftTopColumn"/>
+                <ColumnDefinition Width="945" Name="MainContentColumn"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+                <Border Margin="10,15,10,15" Height="35" Background="{StaticResource d2}" CornerRadius="3" Grid.Column="0">
+                </Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <Border Margin="10,15,10,15" HorizontalAlignment="Right" CornerRadius="3" Background="{StaticResource d2}" Width="200" Height="35"></Border>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+                <Border Margin="10,15,10,15" Height="590" Background="{StaticResource d2}" CornerRadius="3">
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <Button Height="100">
+                            
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+        </Grid>
+    </Border>
 </Window>
